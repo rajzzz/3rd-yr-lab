@@ -42,6 +42,15 @@ void sort(process p[], int n)
                 p[i] = p[j];
                 p[j] = temp;
             }
+            else if (p[i].arrival_time == p[j].arrival_time)
+            {
+                if (p[i].priority < p[j].priority)
+                {
+                    process temp = p[i];
+                    p[i] = p[j];
+                    p[j] = temp;
+                }
+            }
         }
     }
 }
