@@ -16,7 +16,7 @@ list:                       /*empty */
          |
         list error '\n'
          {
-           printf("errorrrrrr\n");
+           printf("Syntax error\n");
            yyerrok;
          }
          ;
@@ -27,7 +27,7 @@ stat:    expr
          |
          LETTER '=' expr
          {
-           printf("here\n");
+           printf("value assigned successfully\n");
            regs[$1] = $3;
          }
          ;

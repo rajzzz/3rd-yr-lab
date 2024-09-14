@@ -1324,7 +1324,7 @@ yyreduce:
 /* Line 1455 of yacc.c  */
 #line 18 "calc.y"
     {
-           printf("errorrrrrr\n");
+           printf("Syntax error\n");
            yyerrok;
          ;}
     break;
@@ -1343,7 +1343,7 @@ yyreduce:
 /* Line 1455 of yacc.c  */
 #line 29 "calc.y"
     {
-           printf("here\n");
+           printf("value assigned successfully\n");
            regs[(yyvsp[(1) - (3)])] = (yyvsp[(3) - (3)]);
          ;}
     break;
