@@ -28,10 +28,9 @@ void getProcessInfo(process p[], int n)
     }
 }
 
-// we will sort the processes based on arrival time
+// Sort processes based on arrival time, and if arrival times are the same, sort by priority (lower value means higher priority)
 void sort(process p[], int n)
 {
-
     for (int i = 0; i < n; i++)
     {
         for (int j = i + 1; j < n; j++)
@@ -44,7 +43,7 @@ void sort(process p[], int n)
             }
             else if (p[i].arrival_time == p[j].arrival_time)
             {
-                if (p[i].priority < p[j].priority)
+                if (p[i].priority > p[j].priority) // Lower priority value means higher priority
                 {
                     process temp = p[i];
                     p[i] = p[j];
@@ -54,8 +53,6 @@ void sort(process p[], int n)
         }
     }
 }
-
-// NOTE : We will consider higher numerical value as higher priority
 
 int main()
 {
@@ -79,7 +76,6 @@ int main()
 
     while (completed < n)
     {
-
         for (int i = 0; i < n; i++)
         {
             if (p[i].arrival_time <= current_time && !in_queue[i] && !p[i].completed)
@@ -105,7 +101,7 @@ int main()
                 {
                     max = queue[i];
                 }
-                else if (p[queue[i]].priority > p[max].priority)
+                else if (p[queue[i]].priority < p[max].priority) // Lower priority value means higher priority
                 {
                     max = queue[i];
                 }
