@@ -66,7 +66,7 @@ class CurrentAccount extends BankAccount {
 		}
 	}
 }
-public class exp3 {
+public class bank {
     public static void main(String[] args) {
 		SavingsAccount savings_account = new SavingsAccount("A9201", 1000, 5);	
 		CurrentAccount current_account = new CurrentAccount("C4303", 2000, 1000);

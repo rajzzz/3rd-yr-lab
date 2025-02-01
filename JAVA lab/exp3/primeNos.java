@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class exp2 {
+public class primeNos {
     public static boolean checkPrime(int n) {
         if (n <= 1)
             return false;

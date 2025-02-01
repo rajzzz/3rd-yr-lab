@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class exp4 {
+public class safePosition {
 
     public static int josephus(int n, int k) {
         if (n == 1) {
@@ -20,5 +20,4 @@ public class exp4 {
         System.out.println("The safe position is: " + safePosition);
         scanner.close();
     }
-
 }
