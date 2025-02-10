@@ -1,0 +1,75 @@
+body {
+    background-color: #E8F5E9;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.nav-table {
+    width: 80%;
+    margin: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2E7D32;
+    font-size: 18px;
+}
+
+.nav-table td a:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+.header {
+    background-color: #F1F8E9;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #4CAF50;
+}
+
+.welcome-header {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.resources-list li:hover {
+    background-color: #C8E6C9;
+    transition: background-color 0.3s ease;
+}
+
+.course-item:hover {
+    background-color: #A5D6A7;
+    transition: background-color 0.3s ease;
+}
+
+.divider {
+    width: 80%;
+    border: 1px solid #4CAF50;
+}
+
+.main-content {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    color: #2E7D32;
+    font-size: 24px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}

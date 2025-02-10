@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .welcome-header {
+            font-size: 36px;
+            color: #1B5E20;
+            margin-bottom: 30px;
+        }
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-item {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #C8E6C9;
+            border-radius: 5px;
+        }
+        .department-info {
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+        }
+        .highlight-section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="welcome-header">Welcome to Our College</h1>
+        <hr class="divider">
+        <table class="nav-table" cellpadding="15">
+            <tr>
+                <td><a href="./courses.html" class="nav-link" style="font-weight: bold;">Courses</a></td>
+                <td><a href="./departments.html" class="nav-link" style="font-weight: bold;">Departments</a></td>
+                <td><a href="./faculties.html" class="nav-link" style="font-weight: bold;">Faculties</a></td>
+                <td><a href="./library.html" class="nav-link" style="font-weight: bold;">Library</a></td>
+            </tr>
+        </table>
+        <hr class="divider">
+    </header>
+
+    <div class="main-content">
+        <section class="highlight-section">
+            <h2 class="section-title">Our Courses</h2>
+            <ul class="course-list">
+                <li class="course-item">Bachelor of Computer Applications (BCA)</li>
+                <li class="course-item">Bachelor of Commerce (B.Com)</li>
+                <li class="course-item">Bachelor of Technology (BTech)</li>
+                <li class="course-item">Bachelor of Business Administration (BBA)</li>
+            </ul>
+        </section>
+
+        <section class="department-info">
+            <h2 class="section-title">Our Departments</h2>
+            <ul class="course-list">
+                <li class="course-item">Department of Computer Science</li>
+                <li class="course-item">Department of Information Technology</li>
+                <li class="course-item">Department of Artificial Intelligence</li>
+            </ul>
+        </section>
+
+        <section class="highlight-section">
+            <h2 class="section-title">Campus Highlights</h2>
+            <p style="line-height: 1.6;">Our college offers state-of-the-art facilities, experienced faculty, and a vibrant campus life. Join us for a transformative educational experience.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <hr class="divider">
+        <p style="color: #666666;">&copy; 2025 Our College. All rights reserved.</p>
+    </footer>
+</body>
+</html>

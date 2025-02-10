@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Faculties - Our College</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .faculty-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .faculty-name {
+            color: #2E7D32;
+            margin-bottom: 10px;
+        }
+
+        .faculty-info {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faculty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .faculty-table th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+        }
+
+        .faculty-table td {
+            padding: 12px;
+            border: 1px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="section-title">Our Faculty Members</h1>
+        <hr class="divider">
+        <table class="nav-table" cellpadding="15">
+            <tr>
+                <td><a href="./index.html" class="nav-link" style="font-weight: bold;">Home</a></td>
+                <td><a href="./courses.html" class="nav-link" style="font-weight: bold;">Courses</a></td>
+                <td><a href="./departments.html" class="nav-link" style="font-weight: bold;">Departments</a></td>
+                <td><a href="./library.html" class="nav-link" style="font-weight: bold;">Library</a></td>
+            </tr>
+        </table>
+        <hr class="divider">
+    </header>
+
+    <div class="main-content">
+        <table class="faculty-table">
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Specialization</th>
+            </tr>
+            <tr>
+                <td>Dr. John Doe</td>
+                <td>Computer Science</td>
+                <td>Machine Learning</td>
+            </tr>
+            <tr>
+                <td>Prof. Jane Smith</td>
+                <td>Information Technology</td>
+                <td>Cyber Security</td>
+            </tr>
+            <tr>
+                <td>Dr. Robert Wilson</td>
+                <td>Artificial Intelligence</td>
+                <td>Deep Learning</td>
+            </tr>
+        </table>
+
+        <div class="faculty-grid">
+            <div class="faculty-card">
+                <h3 class="faculty-name">Dr. John Doe</h3>
+                <p class="faculty-info" style="border-left: 3px solid #4CAF50; padding-left: 10px;">
+                    <strong>Qualification:</strong> Ph.D. in Computer Science<br>
+                    <strong>Experience:</strong> 15+ years<br>
+                    <strong>Research Areas:</strong> Machine Learning, AI
+                </p>
+                <p class="faculty-info" style="font-style: italic; color: #4CAF50; margin-top: 10px;">
+                    Currently working on: Deep Learning Projects
+                </p>
+            </div>
+            <div class="faculty-card">
+                <h3 class="faculty-name">Prof. Jane Smith</h3>
+                <p class="faculty-info" style="border-left: 3px solid #4CAF50; padding-left: 10px;">
+                    <strong>Qualification:</strong> Ph.D. in Information Security<br>
+                    <strong>Experience:</strong> 10+ years<br>
+                    <strong>Expertise:</strong> Network Security
+                </p>
+                <p class="faculty-info" style="font-style: italic; color: #4CAF50; margin-top: 10px;">
+                    Currently working on: Cyber Security Projects
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <hr class="divider">
+        <p style="color: #666666;">&copy; 2025 Our College. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
