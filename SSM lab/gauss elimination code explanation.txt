@@ -1,0 +1,150 @@
+Certainly! Let's break down these two lines in detail.
+
+1. **Calculation of the Factor:**
+    ```scilab
+    factor = augmented(j,i)/augmented(i,i);
+    ```
+    - **Purpose:** This line calculates the `factor` used to eliminate the elements below the pivot element in the current column during the forward elimination process.
+    - **How it works:**
+        - `augmented(j,i)` is the element in the j-th row and i-th column of the augmented matrix.
+        - `augmented(i,i)` is the pivot element in the i-th row and i-th column of the augmented matrix.
+        - The `factor` is calculated as the ratio of `augmented(j,i)` to `augmented(i,i)`.
+        - This factor represents how many times the pivot row needs to be subtracted from the j-th row to eliminate the element `augmented(j,i)`.
+
+2. **Row Operation:**
+    ```scilab
+    augmented(j,i:n+1) = augmented(j,i:n+1) - factor * augmented(i,i:n+1);
+    ```
+    - **Purpose:** This line performs the row operation to eliminate the element in the j-th row and i-th column by subtracting the scaled pivot row from the j-th row.
+    - **How it works:**
+        - `augmented(j,i:n+1)` represents the sub-row of the j-th row from the i-th column to the (n+1)-th column (inclusive of the vector B element).
+        - `factor * augmented(i,i:n+1)` is the scaled version of the sub-row of the i-th row from the i-th column to the (n+1)-th column.
+        - The subtraction `augmented(j,i:n+1) - factor * augmented(i,i:n+1)` updates the elements of the j-th row by eliminating the element in the i-th column.
+        - This operation ensures that the element `augmented(j,i)` becomes zero.
+
+**Example Walkthrough:**
+
+Assume the initial state of the augmented matrix is:
+\[ \text{augmented} = \begin{bmatrix}
+2 & 3 & 1 & 9 \\
+4 & 1 & -2 & 2 \\
+-2 & 1 & 2 & -3
+\end{bmatrix} \]
+
+For the first iteration (i = 1, j = 2):
+1. Calculate the `factor`:
+    \[
+    \text{factor} = \frac{\text{augmented}(2,1)}{\text{augmented}(1,1)} = \frac{4}{2} = 2
+    \]
+
+2. Perform the row operation:
+    \[
+    \text{augmented}(2,1:4) = \text{augmented}(2,1:4) - 2 \times \text{augmented}(1,1:4)
+    \]
+    \[
+    \begin{bmatrix}
+    4 & 1 & -2 & 2
+    \end{bmatrix} - 2 \times \begin{bmatrix}
+    2 & 3 & 1 & 9
+    \end{bmatrix}
+    \]
+    \[
+    = \begin{bmatrix}
+    4 & 1 & -2 & 2
+    \end{bmatrix} - \begin{bmatrix}
+    4 & 6 & 2 & 18
+    \end{bmatrix}
+    \]
+    \[
+    = \begin{bmatrix}
+    0 & -5 & -4 & -16
+    \end{bmatrix}
+    \]
+
+The updated augmented matrix will now be:
+\[ \text{augmented} = \begin{bmatrix}
+2 & 3 & 1 & 9 \\
+0 & -5 & -4 & -16 \\
+-2 & 1 & 2 & -3
+\end{bmatrix} \]
+
+This process is repeated for all rows to form an upper triangular matrix, enabling us to solve for the unknowns using backward substitution.
+
+----------------------------------------------------------------------------------
+
+Sure! Let’s go through these lines of code in detail:
+
+```scilab
+for i = n:-1:1
+    X(i) = (augmented(i, n+1) - augmented(i, 1:n) * X) / augmented(i, i);
+end
+```
+
+**Purpose:**
+This section of code performs the backward substitution step in the Gauss Elimination method to solve the system of linear equations. After the forward elimination step, the augmented matrix is transformed into an upper triangular matrix. Backward substitution is used to find the solution vector `X`.
+
+**Step-by-Step Explanation:**
+
+1. **Loop Iteration:**
+    ```scilab
+    for i = n:-1:1
+    ```
+    - This loop starts from the last row (`i = n`) and iterates backwards to the first row (`i = 1`).
+    - `n` is the number of rows (or columns) in the matrix `A`.
+
+2. **Calculate the Solution Element:**
+    ```scilab
+    X(i) = (augmented(i, n+1) - augmented(i, 1:n) * X) / augmented(i, i);
+    ```
+    - **augmented(i, n+1):** This refers to the element in the (i, n+1)-th position of the augmented matrix, which is the right-hand side value (the B part of the augmented matrix).
+    - **augmented(i, 1:n):** This is the row vector containing the elements of the i-th row from the 1st to the n-th column.
+    - **X:** This is the solution vector being calculated.
+    - **augmented(i, i):** This is the pivot element in the i-th row and i-th column of the augmented matrix.
+
+    Let’s break down the calculation:
+    - `augmented(i, n+1)` gives the right-hand side value for the i-th equation.
+    - `augmented(i, 1:n) * X` performs matrix multiplication between the i-th row of the upper triangular matrix and the solution vector `X`. This represents the sum of the known values of the variables that have already been solved.
+    - `augmented(i, n+1) - augmented(i, 1:n) * X` calculates the remaining value to solve for `X(i)` after accounting for the known values.
+    - Dividing this result by `augmented(i, i)` (the pivot element) isolates `X(i)`.
+
+**Example Walkthrough:**
+
+Suppose the augmented matrix after forward elimination is:
+\[ \text{augmented} = \begin{bmatrix}
+2 & 3 & 1 & 9 \\
+0 & -5 & -4 & -16 \\
+0 & 0 & 3 & 1
+\end{bmatrix} \]
+
+For the last iteration (i = 3):
+1. Calculate `X(3)`:
+    \[
+    X(3) = \frac{\text{augmented}(3,4) - (\text{augmented}(3,1:3) \cdot X)}{\text{augmented}(3,3)}
+    \]
+    \[
+    X(3) = \frac{1 - (0 \cdot X(1) + 0 \cdot X(2) + 3 \cdot X(3))}{3}
+    \]
+    \[
+    X(3) = \frac{1}{3}
+    \]
+    \[
+    X(3) = \frac{1}{3} \approx 0.3333
+    \]
+
+For the next iteration (i = 2):
+1. Calculate `X(2)`:
+    \[
+    X(2) = \frac{\text{augmented}(2,4) - (\text{augmented}(2,1:3) \cdot X)}{\text{augmented}(2,2)}
+    \]
+    \[
+    X(2) = \frac{-16 - (0 \cdot X(1) + -5 \cdot X(2) + -4 \cdot 0.3333)}{-5}
+    \]
+    \[
+    X(2) = \frac{-16 + 1.3332}{-5}
+    \]
+    \[
+    X(2) = \frac{-14.6668}{-5} \approx 2.9333
+    \]
+
+This process continues until all elements of `X` are solved, working backwards from the last variable to the first. By the end of the loop, you’ll have the complete solution vector `X`.
+
