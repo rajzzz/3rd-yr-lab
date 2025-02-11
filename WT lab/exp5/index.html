@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input,
+        button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Odd or Even Number Checker</h2>
+    <input type="number" id="numberInput" placeholder="Enter an integer">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            //let num = document.getElementById("numberInput").value;
+            let num = document.querySelector("#numberInput").value;
+            let result = document.getElementById("result");
+
+            if (num === "") {
+                result.textContent = "Please enter a number.";
+                return;
+            }
+
+            num = parseInt(num);
+            if (isNaN(num)) {
+                result.textContent = "Invalid input. Please enter an integer.";
+            } else if (num % 2 === 0) {
+                result.textContent = `${num} is an EVEN number.`;
+            } else {
+                result.textContent = `${num} is an ODD number.`;
+            }
+        }
+    </script>
+</body>
+
+</html>
