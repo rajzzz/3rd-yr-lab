@@ -1,0 +1,31 @@
+name: Sync 3rd Yr to Private Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Public Repo (3rd Yr Btech Stuff)
+        uses: actions/checkout@v4
+
+      - name: Clone Private Project Repo
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          git clone https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/Pulkito4/hour-zero-codes.git private-repo
+          cd private-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync Files to Private Repo (3rd Yr Folder)
+        run: |
+          rsync -av --delete --exclude=".git" ./ private-repo/"3rd yr"/
+          cd private-repo
+          git add "3rd yr"
+          git commit -m "Automated sync from 3rd Yr Btech Stuff" || echo "No changes to commit"
+          git push origin main
