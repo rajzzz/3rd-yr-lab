@@ -10,12 +10,26 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
+            background-color: #f0f8ff;
+        }
+        h2 {
+            color: #00796b;
         }
         input,
         button {
             font-size: 16px;
             padding: 10px;
             margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40;
         }
     </style>
 </head>
@@ -28,7 +42,6 @@
 
     <script>
         function checkNumber() {
-            //let num = document.getElementById("numberInput").value;
             let num = document.querySelector("#numberInput").value;
             let result = document.getElementById("result");
 
