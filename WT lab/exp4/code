@@ -1,0 +1,278 @@
+
+External CSS:
+-------------
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/styles.css */
+body {
+    background-color: #FFF0DC;
+    color: #131010;
+    font-family: Arial, sans-serif;
+}
+.h1 {
+    color: #131010;
+    font-size: 36px;
+}
+.header {
+    background-color: #87CEEB;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #87CEEB;
+}
+
+.nav-table {
+    width: 80%;
+    margin: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #131010;
+    font-size: 18px;
+}
+
+.nav-table td a:hover {
+    color: #2E7D32;
+    text-decoration: underline;
+}
+
+.welcome-header {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    color: #131010;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.resources-list li:hover {
+    background-color: #C8E6C9;
+    transition: background-color 0.3s ease;
+}
+
+.course-item:hover {
+    background-color: #A5D6A7;
+    transition: background-color 0.3s ease;
+}
+
+.divider {
+    width: 80%;
+    border: 1px solid #4682B4;
+}
+
+.main-content {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    color: #131010;
+    font-size: 24px;
+}
+
+.footer {
+    background-color: #87CEEB;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+Internal CSS:
+-------------
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/library.html */
+<style>
+    .library-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    .library-table th,
+    .library-table td {
+        border: 1px solid #4682B4;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .library-table th {
+        background-color: #4682B4;
+        color: white;
+    }
+
+    .resources-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .resources-list li {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #FFF0DC;
+        border-left: 4px solid #4682B4;
+    }
+
+    .section-title {
+        color: #4682B4;
+    }
+
+    .divider {
+        border-color: #4682B4;
+    }
+</style>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/index.html */
+<style>
+    .welcome-header {
+        font-size: 36px;
+        color: #4682B4;
+        margin-bottom: 30px;
+    }
+    .course-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .course-item {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #FFF0DC;
+        border-left: 4px solid #4682B4;
+    }
+    .department-info {
+        padding: 15px;
+        border-left: 4px solid #4682B4;
+    }
+    .highlight-section {
+        background-color: #FFFFFF;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .divider {
+        border-color: #4682B4;
+    }
+</style>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/faculties.html */
+<style>
+    .faculty-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .faculty-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .faculty-name {
+        color: #2E7D32;
+        margin-bottom: 10px;
+    }
+
+    .faculty-info {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .faculty-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .faculty-table th {
+        background-color: #4682B4;
+        color: white;
+        padding: 12px;
+    }
+
+    .faculty-table td {
+        padding: 12px;
+        border: 1px solid #4682B4;
+    }
+    .divider {
+        border-color: #4682B4;
+    }
+</style>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/departments.html */
+<style>
+    .dept-card {
+        border: 1px solid #4682B4;
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+    }
+    .dept-head {
+        color: #4682B4;
+        border-bottom: 2px solid #4682B4;
+        padding-bottom: 10px;
+    }
+    .dept-desc {
+        line-height: 1.6;
+        padding: 10px 0;
+    }
+    .divider {
+        border-color: #4682B4;
+    }
+</style>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/courses.html */
+<style>
+    .course-section {
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .course-details {
+        margin-left: 20px;
+        line-height: 1.6;
+    }
+    .duration {
+        color: #4682B4;
+        font-weight: bold;
+    }
+    .divider {
+        border-color: #4682B4;
+    }
+</style>
+
+Inline CSS:
+-----------
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/library.html */
+<title style="color: #131010;">Library - Our College</title>
+<h1 class="section-title" style="color: #131010;">College Library</h1>
+<a href="./index.html" class="nav-link" style="font-weight: bold;">Home</a>
+<a href="./courses.html" class="nav-link" style="font-weight: bold;">Courses</a>
+<a href="./departments.html" class="nav-link" style="font-weight: bold;">Departments</a>
+<a href="./faculties.html" class="nav-link" style="font-weight: bold;">Faculties</a>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/index.html */
+<h1 class="welcome-header" style="color: #131010;">Welcome to Our College</h1>
+<a href="./courses.html" class="nav-link" style="font-weight: bold;">Courses</a>
+<a href="./departments.html" class="nav-link" style="font-weight: bold;">Departments</a>
+<a href="./faculties.html" class="nav-link" style="font-weight: bold;">Faculties</a>
+<a href="./library.html" class="nav-link" style="font-weight: bold;">Library</a>
+<p style="line-height: 1.6;">Our college offers state-of-the-art facilities, experienced faculty, and a vibrant campus life. Join us for a transformative educational experience.</p>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/faculties.html */
+<p class="faculty-info" style="border-left: 3px solid #4CAF50; padding-left: 10px;">
+<p class="faculty-info" style="font-style: italic; color: #4CAF50; margin-top: 10px;">Currently working on: Deep Learning Projects</p>
+<p class="faculty-info" style="border-left: 3px solid #4CAF50; padding-left: 10px;">
+<p class="faculty-info" style="font-style: italic; color: #4CAF50; margin-top: 10px;">Currently working on: Cyber Security Projects</p>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/departments.html */
+<title style="color: #4682B4;">Departments - Our College</title>
+
+/* filepath: /home/ubuntu/college/3rd-yr-lab/WT lab/exp4/courses.html */
+<title style="color: #4682B4;">Courses - Our College</title>

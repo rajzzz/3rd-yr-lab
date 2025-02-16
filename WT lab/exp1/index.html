@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>College Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #87CEEB;
+            padding: 10px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4682B4;
+            color: white;
+        }
+        .section-title {
+            color: #4682B4;
+        }
+    </style>
 </head>
 <body bgcolor="#FFF0DC" text="#131010">
     <header>
         <center>
-            <font size="6" face="Arial">
-                <h1>Welcome to Our College</h1>
-            </font>
+            <h1 class="section-title">Welcome to Our College</h1>
         </center>
-        <hr width="80%" color="#F0BB78">
+        <hr width="80%" color="#87CEEB">
         <center>
             <table cellpadding="15">
                 <tr>
-                    <td><a href="./courses.html"><font size="4">Courses</font></a></td>
-                    <td><a href="./departments.html"><font size="4">Departments</font></a></td>
-                    <td><a href="./faculties.html"><font size="4">Faculties</font></a></td>
-                    <td><a href="./library.html"><font size="4">Library</font></a></td>
+                    <td><a href="./courses.html">Courses</a></td>
+                    <td><a href="./departments.html">Departments</a></td>
+                    <td><a href="./faculties.html">Faculties</a></td>
+                    <td><a href="./library.html">Library</a></td>
                 </tr>
             </table>
         </center>
-        <hr width="80%" color="#F0BB78">
+        <hr width="80%" color="#87CEEB">
     </header>
 
     <center>
@@ -30,14 +51,12 @@
             <tr>
                 <td>
                     <section id="courses">
-                        <font face="Arial">
-                            <h2><font color="#543A14">Our Courses</font></h2>
-                        </font>
+                        <h2 class="section-title">Our Courses</h2>
                         <ul>
-                            <li><font size="4">Bachelor of Computer Applications (BCA)</font></li>
-                            <li><font size="4">Bachelor of Commerce (B.Com)</font></li>
-                            <li><font size="4">Bachelor of Technology (BTech)</font></li>
-                            <li><font size="4">Bachelor of Business Administration (BBA)</font></li>
+                            <li>Bachelor of Computer Applications (BCA)</li>
+                            <li>Bachelor of Commerce (B.Com)</li>
+                            <li>Bachelor of Technology (BTech)</li>
+                            <li>Bachelor of Business Administration (BBA)</li>
                         </ul>
                     </section>
                 </td>
@@ -45,14 +64,12 @@
             <tr>
                 <td>
                     <section id="departments">
-                        <font face="Arial">
-                            <h2><font color="#543A14">Our Departments</font></h2>
-                        </font>
+                        <h2 class="section-title">Our Departments</h2>
                         <ul>
-                            <li><font size="4">Department of Computer Science</font></li>
-                            <li><font size="4">Department of Artificial Intelligence</font></li>
-                            <li><font size="4">Department of Machine Learning</font></li>
-                            <li><font size="4">Department of Mathematics</font></li>
+                            <li>Department of Computer Science</li>
+                            <li>Department of Artificial Intelligence</li>
+                            <li>Department of Machine Learning</li>
+                            <li>Department of Mathematics</li>
                         </ul>
                     </section>
                 </td>
@@ -60,24 +77,18 @@
             <tr>
                 <td>
                     <section id="library">
-                        <font face="Arial">
-                            <h2><font color="#543A14">Library</font></h2>
-                        </font>
-                        <font size="4">
-                            <p align="justify">Our library offers a vast collection of books, journals, and digital resources for students and faculty members. It is open from 9 AM to 6 PM, Monday to Friday.</p>
-                        </font>
+                        <h2 class="section-title">Library</h2>
+                        <p align="justify">Our library offers a vast collection of books, journals, and digital resources for students and faculty members. It is open from 9 AM to 6 PM, Monday to Friday.</p>
                     </section>
                 </td>
             </tr>
         </table>
     </center>
 
-    <hr width="80%" color="#F0BB78">
+    <hr width="80%" color="#87CEEB">
     <footer>
         <center>
-            <font face="Arial" size="3">
-                <p>&copy; 2025 Our College. All rights reserved.</p>
-            </font>
+            <p>&copy; 2025 Our College. All rights reserved.</p>
         </center>
     </footer>
 </body>

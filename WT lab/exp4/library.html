@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Library - Our College</title>
+    <title style="color: #131010;">Library - Our College</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .library-table {
@@ -14,13 +14,13 @@
 
         .library-table th,
         .library-table td {
-            border: 1px solid #4CAF50;
+            border: 1px solid #4682B4;
             padding: 12px;
             text-align: left;
         }
 
         .library-table th {
-            background-color: #4CAF50;
+            background-color: #4682B4;
             color: white;
         }
 
@@ -32,15 +32,23 @@
         .resources-list li {
             padding: 10px;
             margin: 5px 0;
-            background-color: #E8F5E9;
-            border-left: 4px solid #4CAF50;
+            background-color: #FFF0DC;
+            border-left: 4px solid #4682B4;
+        }
+
+        .section-title {
+            color: #4682B4;
+        }
+
+        .divider {
+            border-color: #4682B4;
         }
     </style>
 </head>
 
 <body>
     <header class="header">
-        <h1 class="section-title">College Library</h1>
+        <h1 class="section-title" style="color: #131010;">College Library</h1>
         <hr class="divider">
         <table class="nav-table" cellpadding="15">
             <tr>
@@ -54,28 +62,27 @@
     </header>
 
     <div class="main-content">
-        <h2 style="color: #2E7D32;">Library Hours</h2>
-        <table class="library-table" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2 class="section-title">Library Hours</h2>
+        <table class="library-table">
             <tr>
-                <th colspan="2" style="text-align: center; font-size: 20px; padding: 15px;">
-                    Library Operating Hours
-                </th>
-            </tr>
-            <tr style="background-color: #F1F8E9;">
-                <td><strong>Monday - Friday</strong></td>
-                <td style="color: #2E7D32;">9:00 AM - 6:00 PM</td>
+                <th>Days</th>
+                <th>Timings</th>
             </tr>
             <tr>
-                <td><strong>Saturday</strong></td>
-                <td style="color: #2E7D32;">10:00 AM - 4:00 PM</td>
+                <td>Monday - Friday</td>
+                <td>9:00 AM - 6:00 PM</td>
             </tr>
             <tr>
-                <td><strong>Sunday</strong></td>
-                <td style="color: #2E7D32;">Closed</td>
+                <td>Saturday</td>
+                <td>10:00 AM - 4:00 PM</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Closed</td>
             </tr>
         </table>
 
-        <h2 style="color: #2E7D32;">Resources Available</h2>
+        <h2 class="section-title">Resources Available</h2>
         <ul class="resources-list">
             <li>50,000+ Books</li>
             <li>Digital Library Access</li>
@@ -86,7 +93,7 @@
 
     <footer class="footer">
         <hr class="divider">
-        <p style="color: #666666;">&copy; 2025 Our College. All rights reserved.</p>
+        <p>&copy; 2025 Our College. All rights reserved.</p>
     </footer>
 </body>
 

@@ -1,12 +1,18 @@
 body {
-    background-color: #E8F5E9;
-    color: #333333;
+    background-color: #FFF0DC;
+    color: #131010;
     font-family: Arial, sans-serif;
 }
-
+.h1 {
+    color: #131010;
+    font-size: 36px;
+}
 .header {
+    background-color: #87CEEB;
+    padding: 10px;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #87CEEB;
 }
 
 .nav-table {
@@ -16,24 +22,18 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #2E7D32;
+    color: #131010;
     font-size: 18px;
 }
 
 .nav-table td a:hover {
-    color: #1B5E20;
+    color: #2E7D32;
     text-decoration: underline;
-}
-
-.header {
-    background-color: #F1F8E9;
-    padding: 20px 0;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #4CAF50;
 }
 
 .welcome-header {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    color: #131010;
 }
 
 .faculty-card:hover {
@@ -54,7 +54,7 @@ body {
 
 .divider {
     width: 80%;
-    border: 1px solid #4CAF50;
+    border: 1px solid #4682B4;
 }
 
 .main-content {
@@ -64,11 +64,12 @@ body {
 }
 
 .section-title {
-    color: #2E7D32;
+    color: #131010;
     font-size: 24px;
 }
 
 .footer {
+    background-color: #87CEEB;
     text-align: center;
     padding: 20px;
     font-size: 14px;
