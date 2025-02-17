@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button, select, textarea {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Information Form</h2>
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Enter Name"><br>
+        <input type="email" id="email" placeholder="Enter Email"><br>
+        <input type="text" id="mobile" placeholder="Enter Mobile No"><br>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <input type="text" id="favouriteColor" placeholder="Enter Favourite Colour"><br>
+        <button type="button" onclick="displayInfo()">Submit</button>
+    </form>
+    <br>
+    <textarea id="output" rows="5" cols="40" readonly></textarea>
+
+    <script>
+        function displayInfo() {
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let gender = document.getElementById("gender").value;
+            let favouriteColor = document.getElementById("favouriteColor").value.trim();
+            let output = document.getElementById("output");
+
+            if (name === "" || email === "" || mobile === "" || gender === "" || favouriteColor === "") {
+                alert("All fields are required!");
+                return;
+            }
+
+            let mobilePattern = /^[0-9]{10}$/;
+            if (!mobilePattern.test(mobile)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return;
+            }
+
+            let userInfo = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nGender: ${gender}\nFavourite Colour: ${favouriteColor}`;
+            output.value = userInfo;
+        }
+    </script>
+</body>
+</html>
