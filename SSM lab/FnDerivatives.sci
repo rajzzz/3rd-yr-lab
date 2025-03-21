@@ -1,8 +1,3 @@
-clc;
-clear;
-clf;
-
-// Define the function
 function y = f(x)
     y = x.^3 - 5*x.^2 + 2*x + 10;
 endfunction
