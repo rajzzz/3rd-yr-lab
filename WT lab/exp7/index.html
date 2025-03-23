@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Information</h2>
+<div id="demo"></div>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        displayStudents(this);
+    }
+};
+xhttp.open("GET", "students.xml", true);
+xhttp.send();
+
+function displayStudents(xml) {
+    var xmlDoc = xml.responseXML;
+    var students = xmlDoc.getElementsByTagName("Student");
+    var output = "<table border='1' cellpadding='10'><tr><th>Enrolment Number</th><th>Name</th><th>Mobile Number</th><th>Email ID</th></tr>";
+
+    for (var i = 0; i < students.length; i++) {
+        var enrol = students[i].getElementsByTagName("EnrolmentNumber")[0].childNodes[0].nodeValue;
+        var name = students[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+        var mobile = students[i].getElementsByTagName("MobileNumber")[0].childNodes[0].nodeValue;
+        var email = students[i].getElementsByTagName("EmailId")[0].childNodes[0].nodeValue;
+
+        output += "<tr><td>" + enrol + "</td><td>" + name + "</td><td>" + mobile + "</td><td>" + email + "</td></tr>";
+    }
+
+    output += "</table>";
+    document.getElementById("demo").innerHTML = output;
+}
+</script>
+
+</body>
+</html>
