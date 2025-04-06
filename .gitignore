@@ -1,2 +1,9 @@
 *.exe
 /ClassDemos
+.Rproj.user
+SSM lab/SSM lab.Rproj
+SSM lab/.Rhistory
+SSM lab/*.pdf
+*.idea
+*.class
+JAVA lab/JAVA lab.iml
