@@ -8,3 +8,4 @@ SSM lab/*.pdf
 *.class
 JAVA lab/JAVA lab.iml
 SSM lab/.RData
+*.db
