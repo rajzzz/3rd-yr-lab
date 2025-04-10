@@ -1,0 +1,7 @@
+Name: John Doe
+Password: 12345
+Email: john.doe@example.com
+
+Name: Jane Smith
+Password: qwerty
+Email: jane.smith@example.com

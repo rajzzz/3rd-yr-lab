@@ -24,7 +24,7 @@ jobs:
 
       - name: Sync Files to Private Repo (3rd Yr Folder)
         run: |
-          rsync -av --delete --exclude=".git" ./ private-repo/"3rd yr"/
+          rsync -av --delete --exclude=".git" "./" private-repo/"3rd yr/"
           cd private-repo
           git add "3rd yr"
           git commit -m "Automated sync from 3rd Yr Btech Stuff" || echo "No changes to commit"

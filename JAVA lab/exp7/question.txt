@@ -1,0 +1,3 @@
+Write a client serve based program in Java
+a) A client sends 2 numbers, server recieves, adds and returns the sum to the client
+b) Client requests for a praticular file, if this file exists in the current folder of the server then server sends this file to the client

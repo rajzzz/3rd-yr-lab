@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Students>
+    <Student>
+        <EnrolmentNumber>071</EnrolmentNumber>
+        <Name>Sriyanshu Azad</Name>
+        <MobileNumber>9876543210</MobileNumber>
+        <EmailId>sriyanshu@gmail.com</EmailId>
+    </Student>
+    <Student>
+        <EnrolmentNumber>085</EnrolmentNumber>
+        <Name>Pulkit Goyal</Name>
+        <MobileNumber>9123456789</MobileNumber>
+        <EmailId>pkgoyal@gmail.com</EmailId>
+    </Student>
+    <Student>
+        <EnrolmentNumber>080</EnrolmentNumber>
+        <Name>Deepika Paliwal</Name>
+        <MobileNumber>9321456780</MobileNumber>
+        <EmailId>deepika@gmail.com</EmailId>
+    </Student>
+</Students>
